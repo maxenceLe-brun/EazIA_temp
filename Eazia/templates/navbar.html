@@ -1,0 +1,18 @@
+{% extends 'generic.html' %}
+
+{% block coltemp %}
+  <li class="text-end" style="width: 170px;"><a href="/posts/new">Dashboard ▼</a>
+    <ul class="sub-menus">
+      <li class="text-end"><a href="/posts/new">Nouveau</a></li>
+      <li class="text-end"><a href="/drafts">Mes brouillons</a></li>
+      <li class="text-end"><a href="/historique">Mes publications</a></li>
+      <li class="text-end"><a href="/programmations">Mes programmations</a></li>
+      <li class="text-end"><a data-turbo-method="delete" data-turbo-confirm="Etes-vous sûr ?" href="/users/sign_out">Déconnexion</a></li>
+    </ul>
+  </li>
+</div>
+</ul>
+</nav>
+{% endblock %}
+{% block content %}
+{% endblock %}

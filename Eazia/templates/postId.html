@@ -1,0 +1,202 @@
+{% extends "navbar.html" %}
+
+{% block coltemp %}
+</div>
+</ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div id="container">
+  <div class="container-show d-flex flex-nowrap">
+    <div class="container-prompt-img-description prompt w-50 px-3 py-3">
+      <h4 class="text-center py-3">
+        Votre post
+      </h4>
+
+      <div class="update-img-text infos-card my-5 px-5 pt-3">
+        <div class="form text-center py-3">
+
+          <div class="form py-3 d-flex flex-wrap justify-content-center" data-controller="show-imgs">
+            
+              <div style="flex-basis:33%" class="p-1">
+                <img class="crop" data-show-imgs-target="image" data-src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179610/nupvecozv0lestxwbofq.png" ssl_detected="true" src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179610/nupvecozv0lestxwbofq.png">
+              </div>
+              <div style="flex-basis:33%" class="p-1">
+                <img class="crop" data-show-imgs-target="image" data-src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179613/zzaxwydx0ovtljmyj2mh.png" ssl_detected="true" src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179613/zzaxwydx0ovtljmyj2mh.png">
+              </div>
+              <div style="flex-basis:33%" class="p-1">
+                <img class="crop" data-show-imgs-target="image" data-src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179616/zorcv9kqbpapefveprru.png" ssl_detected="true" src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179616/zorcv9kqbpapefveprru.png">
+              </div>
+              <div style="flex-basis:33%" class="p-1">
+                <img class="crop" data-show-imgs-target="image" data-src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179618/qnozfw5nkzwqgt5nprjz.png" ssl_detected="true" src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179618/qnozfw5nkzwqgt5nprjz.png">
+              </div>
+
+          </div>
+
+
+          <div class="p-3" data-controller="toggle">
+
+            <div class="post-description-modifiable">
+              <p>Découvrez les incroyables plages de la Nouvelle-Calédonie, avec leur sable fin, leur eau turquoise et leur végétation luxuriante. Un véritable paradis terrestre ! #NouvelleCaledonie #PlagesDeRêve</p>
+            </div>
+
+            <div class="d-flex justify-content-center mt-3 flex-wrap">
+
+              <button style="flex-basis:42%" data-action="click->toggle#fireArea" data-toggle-target="modif" class="button-annexe m-2">
+                Modifier ma description ✏️
+              </button>
+                <form autocomplete="off" style="flex-basis:40%" action="/regenerate/96" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden" name="authenticity_token" value="j-gZ-f9t5OisKzvakjIIHzeaUE4yzdA_gdCwABSsfeGrByFsC4KiFdJh9AX0M9scNpmQ34iisGU8orFhEWqwrg" autocomplete="off">
+                  <input type="submit" name="commit" value="Recréer une description 🤔" class="button-annexe m-2" data-toggle-target="regen" data-disable-with="Recréer une description 🤔">
+</form>
+              <div style="flex-basis:100%" data-toggle-target="textarea" class="d-none">
+                <form class="simple_form edit_post" id="edit_post_96" novalidate="novalidate" action="/posts/96" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="patch" autocomplete="off"><input type="hidden" name="authenticity_token" value="7sTsAgIg3dF2L5zG6qu6L2yVE6Bnj1yY-XwwdLr29cNcwL-jAC4N3bykuqgIeyc0JLJcCzwEPyhd7HYgyswSuw" autocomplete="off">
+                  <div class="mb-3 text optional post_description"><textarea class="form-control is-valid text optional" id="modif-description" placeholder="Découvrez les incroyables plages de la Nouvelle-Calédonie, avec leur sable fin, leur eau turquoise et leur végétation luxuriante. Un véritable paradis terrestre ! #NouvelleCaledonie #PlagesDeRêve" name="post[description]">Découvrez les incroyables plages de la Nouvelle-Calédonie, avec leur sable fin, leur eau turquoise et leur végétation luxuriante. Un véritable paradis terrestre ! #NouvelleCaledonie #PlagesDeRêve</textarea></div>
+                  <div class="d-flex justify-content-around">
+                    <button data-action="click->toggle#cancelArea" class="button-cancel" style="flex-basis:40%">
+                      Annuler ❌
+                    </button>
+                    <input type="submit" name="commit" value="Modifier ✔️" class="button-annexe" style="flex-basis:40%" data-disable-with="Modifier ✔️">
+                  </div>
+</form>              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container-instagram w-50 p-3">
+
+
+
+    <h4 class="text-center py-3">
+      Vue Instagram
+    </h4>
+
+
+    <div class="d-flex align-items-center flex-column py-3">
+      <div class="card carousel-card insta text-center mt-4 mb-3">
+
+  <div class="topbar">
+    <div>
+      <img class="icon" src="/assets/138893298-7ee8ffc58be342a32a4b3dd29c91bbfc8a7dd170b1f09739b7521714ed5746da.jpg">
+      <b>warlordkrank</b>
+    </div>
+
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20">
+  <circle cx="7.1" cy="16.4" r="3.1"></circle>
+  <circle cx="16.5" cy="16.4" r="3.1"></circle>
+  <circle cx="25.9" cy="16.4" r="3.1"></circle>
+</svg>
+
+    </div>
+
+  </div>
+
+  <content select="img" style="max-width:max-content;">
+    <div id="carouselExampleIndicators" class="carousel slide custom">
+
+      <div class="carousel-indicators">
+
+            <div data-bs-slide-to="0" class="active rounded-circle card-indicator"></div>
+            <div data-bs-slide-to="1" class=" rounded-circle card-indicator"></div>
+            <div data-bs-slide-to="2" class=" rounded-circle card-indicator"></div>
+            <div data-bs-slide-to="3" class=" rounded-circle card-indicator"></div>
+
+      </div>
+
+      <div class="carousel-inner" data-controller="show-imgs">
+          <div class="carousel-item active">
+            <img class="crop" data-show-imgs-target="image" data-src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179610/nupvecozv0lestxwbofq.png" ssl_detected="true" src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179610/nupvecozv0lestxwbofq.png">
+          </div>
+          <div class="carousel-item ">
+            <img class="crop" data-show-imgs-target="image" data-src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179613/zzaxwydx0ovtljmyj2mh.png" ssl_detected="true" src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179613/zzaxwydx0ovtljmyj2mh.png">
+          </div>
+          <div class="carousel-item ">
+            <img class="crop" data-show-imgs-target="image" data-src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179616/zorcv9kqbpapefveprru.png" ssl_detected="true" src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179616/zorcv9kqbpapefveprru.png">
+          </div>
+          <div class="carousel-item ">
+            <img class="crop" data-show-imgs-target="image" data-src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179618/qnozfw5nkzwqgt5nprjz.png" ssl_detected="true" src="http://res.cloudinary.com/dy8sfeyxt/image/upload/v1696179618/qnozfw5nkzwqgt5nprjz.png">
+          </div>
+      </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+
+
+    </div>
+  </content>
+
+          <div class="interactionbtns">
+
+  <span>
+    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="20" height="20">
+      <path d="M17.42 8.18a4.85 4.85 0 0 0-8-5.48 4.85 4.85 0 1 0-8 5.48l7.9 9z"></path>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" width="20" height="20">
+      <path d="M18 18.2l-1.4-3.8a8.8 8.8 0 1 0-2.3 2.3z"></path>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.4 39.3" width="20" height="20">
+      <path d="M20.2 35.4L17 18.8 3 6.4h34.5zM17 18.8L37.4 6.4" style="stroke-width: 2;"></path>
+    </svg>
+
+  </span>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46.3" width="20" height="20">
+    <path d="M10.2 3.4v39.3L24.4 29l12.8 14.6V3.4z" style="stroke-width: 2;"></path>
+  </svg>
+
+</div>
+
+
+          <div class="textcontent" data-controller="toggledescription">
+    <b> warlordkrank </b>
+
+    <span style="display:inline;" data-action="click->toggledescription#fireplus">
+      <span data-toggledescription-target="description" style="cursor:pointer;">
+          Découvrez les incroyables plages de la Nouvelle-Calédonie, avec l<span style="color: grey;">...plus</span>
+      </span>
+      <span data-toggledescription-target="plus" class="d-none" style="cursor:pointer;">Découvrez les incroyables plages de la Nouvelle-Calédonie, avec leur sable fin, leur eau turquoise et leur végétation luxuriante. Un véritable paradis terrestre ! #NouvelleCaledonie #PlagesDeRêve</span>
+    </span>
+
+  </div>
+
+</div>
+
+      <div class="container-buttons d-flex justify-content-evenly flex-wrap py-3">
+        <div style="flex-basis:30%">
+  <form data-controller="alert" data-action="submit->alert#initSweetalert" class="simple_form edit_post" id="edit_post_96" novalidate="novalidate" action="/posts/96" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="delete" autocomplete="off"><input type="hidden" name="authenticity_token" value="JWhIqDmXUkUwdis1TfObSXJrD9UWpWfzSwXzNaIYtpjkWr8fonXCMr3MyRDakX1Cw0gW9jBID0ZUfKAFdHgCmQ" autocomplete="off">
+     <input type="submit" name="commit" value="Supprimer 🗑️" class="button-cancel" data-disable-with="Supprimer 🗑️">
+</form></div>
+
+<div style="flex-basis:60%" class="text-end">
+  <a class="button-annexe mx-2" href="/drafts">Sauvegarder 💾</a>
+  <a class="button-annexe mx-2" href="/post/96/programmation">Programmer 📅</a>
+</div>
+
+<div style="flex-basis:70%" class="text-center my-3">
+  <a class="button-instagram-show my-3" href="/publish/96">Publier</a>
+</div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+{% endblock %}

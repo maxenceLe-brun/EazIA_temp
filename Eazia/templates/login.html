@@ -1,0 +1,32 @@
+{% extends 'generic.html' %}
+
+{% block coltemp %}
+</div>
+</ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="body-form my-5 ">
+  <div class="formulaire infos-card rounded-4 p-5 w-75">
+    <div class="form-text">
+      <h2 class="enonce my-3 py-3">Connexion</h2>
+    </div>
+
+    <form data-turbo="false" class="simple_form new_user" id="new_user" novalidate="novalidate" action="/users/sign_in" accept-charset="UTF-8" method="post">{% csrf_token %}
+    	<input type="hidden" name="authenticity_token" value="BvMqCYICI02XnFL0WPyVweLKftbCzPeVit2AyDzL0T3moJ1ExgVBxFgPgD6d607IaEYB0nE8ClR2dxTMZan0aA" autocomplete="off">
+      <div class="form-inputs">
+        <div class="mb-3 email optional user_email"><label class="form-label email optional" for="user_email">Email</label><input class="form-control string email optional" autocomplete="email" autofocus="autofocus" type="email" value="" name="user" id="user_email"></div>
+        <div class="mb-3 password optional user_password"><label class="form-label password optional" for="user_password">Mot de passe</label><input class="form-control password optional" autocomplete="current-password" type="password" name="password" id="user_password"></div>
+        <fieldset class="mb-3 boolean optional user_remember_me"><div class="form-check"><input name="user[remember_me]" type="hidden" value="0" autocomplete="off"><input class="form-check-input boolean optional" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me"><label class="form-check-label boolean optional" for="user_remember_me">Se rappeler de moi</label></div></fieldset>
+      </div>
+
+      <div class="form-actions form-text">
+          <input type="submit" name="commit" value="Se connecter" class="btn button-valider" data-disable-with="Se connecter">
+        </div>
+</form>
+  <a href="/sign_up">Sign up</a><br>
+  <a href="/users/password/new">Forgot your password?</a><br>
+  </div>
+</div>
+{% endblock %}

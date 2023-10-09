@@ -1,0 +1,70 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+<div data-controller="loader">
+  <nav class="breadcrumb infos-card" data-loader-target="breadcrumb">
+      <ul>
+          <li class="breadcrumb_active">Générateur de post ➤</li>
+          <li class="breadcrumb_inactive">Modification ➤</li>
+          <li class="breadcrumb_inactive">Publication</li>
+      </ul>
+  </nav>
+  <div id="container">
+    <div class="d-flex justify-content-center base" data-controller="ia-generator" data-loader-target="togglableElement">
+      <div class=" w-75 infos-card rounded-4 px-7 mt-4 d-flex flex-column align-items-center">
+        <h2 class="mt-4">Votre prochaine publication Instagram</h2>
+        <div class="w-75  px-4 mt-4">
+
+          <form class="simple_form new_post" id="new_post" novalidate="novalidate" enctype="multipart/form-data" action="/posting/" accept-charset="UTF-8" method="post">{% csrf_token %}
+            <input type="hidden" name="authenticity_token" value="5Bsq8VkP80OzSnsG39-NIZERCExuKZXzwS-0oIdn-QXyg1bf8V-3--06hoXI0CvVMk0CkPzONA-ZEZ9NXOpocQ" autocomplete="off">
+            <div class="mb-3 text required post_prompt"><label class="form-label text required" for="post_prompt">Sujet de votre post <abbr title="required">*</abbr></label><textarea class="form-control text required" data-action="blur->ia-generator#blur" data-ia-generator-target="prompt" placeholder="Randonnée au sommet d'un volcan au Guatemala... Recette de mon dernier crumble aux pommes... Soirée entre amis au bord du feu..." name="post[prompt]" id="post_prompt" style="height: 58px;"></textarea></div>
+            <p class="d-none text-danger fst-italic" ,="" data-ia-generator-target="text" style="font-size: 12px;">le prompt est obligatoire</p>
+
+            <div class=" d-flex justify-content-space-between pt-5 mt-4 form-new">
+
+              <div class="form-group  d-flex flex-row">
+                <div class="mb-3 integer optional post_many_imgs"><label class="form-label integer optional" for="post_many_imgs">Nombre d'images à générer (optionnel)</label>
+                  <select name="post[many_imgs]" id="post_many_imgs"><option value="">choisissez un chiffre</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option></select>
+</div>              </div>
+              <div class="form-photo">
+              <div class="mb-3 file optional post_pictures"><label class="form-label file optional" for="post_pictures">Téléverser vos images (optionnel)</label><input name="post[pictures][]" type="hidden" value="" autocomplete="off"><input class="form-control file optional" multiple="multiple" type="file" name="post[pictures][]" id="post_pictures"></div>
+              </div>
+            </div>
+            <div class="text-center mt-5">
+              <input type="submit" name="commit" value="Générer votre post" class="button-valider mb-5 selector" data-action="click->loader#fire" data-disable-with="Générer votre post">
+            </div>
+</form>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-none loader" data-loader-target="chargement">
+
+      <div class="titre">
+        <span class="lettre">C</span>
+        <span class="lettre">H</span>
+        <span class="lettre">A</span>
+        <span class="lettre">R</span>
+        <span class="lettre">G</span>
+        <span class="lettre">E</span>
+        <span class="lettre">M</span>
+        <span class="lettre">E</span>
+        <span class="lettre">N</span>
+        <span class="lettre">T</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<the-script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></the-script>
+  
+
+
+{% endblock %}
